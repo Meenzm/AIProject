@@ -1,0 +1,21 @@
+จะเทสโมเดลยังไง
+sample_size = 10
+sample_indices = np.random.choice(len(X_test), sample_size, replace=False)
+print("Sample Predictions:")
+for idx in sample_indices:
+    country = df.iloc[idx]['Country']
+    activity = predicted_labels[idx]
+    print(f"ไป {country} เพื่อทำกิจกรรม: {activity}")
+
+จะได้ผลลัพธ์ประมาณนี้
+Sample Predictions:
+ไป Turkey เพื่อทำกิจกรรม: Metropolitan Elegance
+ไป Turkey เพื่อทำกิจกรรม: Historical Marvel
+ไป Italy เพื่อทำกิจกรรม: Historical Marvel
+ไป Japan เพื่อทำกิจกรรม: Festive Heritage
+ไป Argentina เพื่อทำกิจกรรม: Cultural Hotspot
+ไป USA เพื่อทำกิจกรรม: Metropolitan Elegance
+ไป Russia เพื่อทำกิจกรรม: Wildlife Wonder
+ไป India เพื่อทำกิจกรรม: Urban Leisure Experience
+ไป Russia เพื่อทำกิจกรรม: Festive Heritage
+ไป Russia เพื่อทำกิจกรรม: Wildlife Wonder
