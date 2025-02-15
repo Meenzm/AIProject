@@ -20,8 +20,8 @@ Predictions:
 ไป Russia เพื่อทำกิจกรรม: Festive Heritage
 ไป Russia เพื่อทำกิจกรรม: Wildlife Wonder
 
-โค้ด One-hot encoding
-# แปลงข้อความเป็นตัวเลขด้วย Label Encoding
+โค้ด One-hot encoding แปลงเดือนที่เป็นข้อความให้เป็นตัวเลข 0 , 1 จะแปลงช่วงเดือนจากคอมลัมน์ Best time to visit
+#แปลงข้อความเป็นตัวเลขด้วย Label Encoding
 label_encoders = {}
 for col in non_numeric_cols:
     le = LabelEncoder()
