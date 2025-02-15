@@ -8,7 +8,7 @@ for idx in sample_indices:
     print(f"ไป {country} เพื่อทำกิจกรรม: {activity}")
 
 จะได้ผลลัพธ์ประมาณนี้
-Sample Predictions:
+Predictions:
 ไป Turkey เพื่อทำกิจกรรม: Metropolitan Elegance
 ไป Turkey เพื่อทำกิจกรรม: Historical Marvel
 ไป Italy เพื่อทำกิจกรรม: Historical Marvel
@@ -19,3 +19,16 @@ Sample Predictions:
 ไป India เพื่อทำกิจกรรม: Urban Leisure Experience
 ไป Russia เพื่อทำกิจกรรม: Festive Heritage
 ไป Russia เพื่อทำกิจกรรม: Wildlife Wonder
+
+โค้ด One-hot encoding
+# แปลงข้อความเป็นตัวเลขด้วย Label Encoding
+label_encoders = {}
+for col in non_numeric_cols:
+    le = LabelEncoder()
+    df[col] = le.fit_transform(df[col])
+    label_encoders[col] = le  # เก็บ Encoder ไว้ใช้ภายหลัง
+
+# One-Hot Encoding สำหรับเดือน
+months = ['January', 'February', 'March', 'April', 'May', 'June',
+          'July', 'August', 'September', 'October', 'November', 'December']
+df = pd.get_dummies(df, columns=months)
